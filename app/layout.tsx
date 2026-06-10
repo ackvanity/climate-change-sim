@@ -17,7 +17,11 @@ export default function RootLayout({
       lang="en"
       className={`dark h-full antialiased bg-background-50 text-gray-300`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <main className="w-full min-h-full p-12">
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
