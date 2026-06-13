@@ -335,7 +335,7 @@ function CellPopover({ x, y, model, open, onOpenChange, onMaterialSelect }: Cell
       <PopoverTrigger asChild><span className="sr-only" aria-hidden /></PopoverTrigger>
       <PopoverContent className="w-64">
         <PopoverHeading>Cell ({x}, {y})</PopoverHeading>
-        <PopoverDescription asChild>
+        <PopoverDescription>
           <div className="flex flex-col gap-3">
             {cell && (
               <div className="flex flex-col gap-1 text-xs">
