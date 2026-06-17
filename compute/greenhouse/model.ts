@@ -22,8 +22,6 @@ export default function computeClimateModel(C: number, S_0: number, r_A: number,
   let make_model = ([T_E, T_A]: [number, number]) => computeThermalModel(make_props(T_A), T_A, T_E);
 
   // Solver
-  // Currently the numeric package does *not* recognize that the code minimizes an N-dimensional function!
-  // Remove once a fix is pushed.
   // @ts-expect-error
   const arr = numeric.uncmin(([T_E, T_A]: [number, number]) => make_model([T_E, T_A]).error, [288, 245]).solution;
 
